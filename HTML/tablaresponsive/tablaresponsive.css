@@ -1,0 +1,36 @@
+.tabla-mobile {
+    display: none;
+    border: 4px inset grey;
+    background-color: rgb(147, 194, 173);
+    padding: 3px;
+    font-size: 20px;
+    min-width: 30%;
+    max-width: 40%;
+}
+.tabla-mobile .fila .columna {
+    display: flex;
+    border: 1px solid grey;
+}
+
+.tabla-mobile .fila .columna .header, .tabla-mobile .fila .columna .columna{
+    border-bottom: none;
+    border: 1px solid rgb(77, 77, 77);
+    padding: 10px;
+}
+
+.tabla-mobile .fila .columna .header, .tabla-mobile .fila:nth-child(even){
+    background-color: rgb(147, 194, 173);
+}
+.tabla-mobile .fila .columna .header, .tabla-mobile .fila:nth-child(odd){
+    background-color: rgb(202, 142, 142);
+}
+
+@media (max-width: 768px) {
+    .tabla-mobile {
+        display: block;
+    
+    }
+    .calificaciones{
+        display: none;
+    }
+}
