@@ -28,9 +28,56 @@
 @media (max-width: 768px) {
     .tabla-mobile {
         display: block;
-    
+
     }
     .calificaciones{
+        display: none;
+    }
+}
+
+
+
+
+#
+
+.tabla-mobile {
+    display: none;
+    border: 4px inset grey;
+    background-color: rgb(147, 194, 173);
+    padding: 3px;
+    font-size: 20px;
+    min-width: 30%;
+    max-width: 40%;
+}
+
+.tabla-mobile .fila .columna {
+    display: flex;
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+/* Aplicar borde solo a las columnas de datos */
+.tabla-mobile .fila .columna {
+    border-bottom: none;
+}
+
+/* Estilo para filas pares */
+.tabla-mobile .fila:nth-child(even) {
+    background-color: rgb(147, 194, 173);
+}
+
+/* Estilo para filas impares */
+.tabla-mobile .fila:nth-child(odd) {
+    background-color: rgb(202, 142, 142);
+}
+
+@media (max-width: 768px) {
+    .tabla-mobile {
+        display: block;
+    }
+
+    /* Ocultar la tabla de calificaciones en pantallas pequeñas */
+    .calificaciones {
         display: none;
     }
 }
