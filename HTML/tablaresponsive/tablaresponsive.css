@@ -71,6 +71,20 @@
     background-color: rgb(202, 142, 142);
 }
 
+.calificaciones {
+    /* Estilos anteriores */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el contenido que no cabe en la celda */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto se desborda */
+}
+
+.tabla-mobile .fila .columna {
+    /* Estilos anteriores */
+    overflow: hidden; /* Oculta el contenido que no cabe en la celda */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto se desborda */
+}
+
+
 @media (max-width: 768px) {
     .tabla-mobile {
         display: block;
