@@ -1,3 +1,25 @@
+
+
+@property
+def weekday(self) -> int:
+    '''Día de la semana de la fecha (0 para domingo, ..., 6 para sábado).'''
+    # Calcula el número total de días transcurridos desde el 1-1-1900
+    total_days = self.get_delta_days()
+    # Añade el desplazamiento para el primer día (lunes) del año 1900
+    total_days += 1
+    # Calcula el día de la semana usando el módulo 7 (0 para domingo, ..., 6 para sábado)
+    return total_days % 7
+
+@property
+def is_weekend(self) -> bool:
+    '''Determina si la fecha cae en fin de semana (sábado o domingo).'''
+    # Obtiene el día de la semana
+    day_of_week = self.weekday
+    # Si es sábado (6) o domingo (0), retorna True, de lo contrario, retorna False
+    return day_of_week == 6 or day_of_week == 0
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
     <head>
